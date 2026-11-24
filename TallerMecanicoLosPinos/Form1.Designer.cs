@@ -44,6 +44,7 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
+            cmbservicio = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvRegistros).BeginInit();
             SuspendLayout();
             // 
@@ -181,11 +182,22 @@
             label6.TabIndex = 15;
             label6.Text = "Observaciones";
             // 
+            // cmbservicio
+            // 
+            cmbservicio.FormattingEnabled = true;
+            cmbservicio.Items.AddRange(new object[] { "cambio de aceite", "mantenimiento", "revision de frenos", "revision motor" });
+            cmbservicio.Location = new Point(512, 178);
+            cmbservicio.Name = "cmbservicio";
+            cmbservicio.Size = new Size(121, 23);
+            cmbservicio.TabIndex = 16;
+            cmbservicio.SelectedIndexChanged += cmbservicio_SelectedIndexChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 521);
+            Controls.Add(cmbservicio);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -227,5 +239,6 @@
         private Label label4;
         private Label label5;
         private Label label6;
+        private ComboBox cmbservicio;
     }
 }

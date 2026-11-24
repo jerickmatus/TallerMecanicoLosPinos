@@ -14,7 +14,7 @@ namespace TallerMecanicoLosPinos
 
             ConfigurarDataGridView();
 
-            
+
             try
             {
                 registros = PersistenciaTxt.Cargar();
@@ -28,14 +28,14 @@ namespace TallerMecanicoLosPinos
 
             dgvRegistros.DataSource = registros;
 
-            
+
             btnAgregar.Click += btnAgregar_Click;
             btnEliminar.Click += btnEliminar_Click;
             btnLimpiar.Click += btnLimpiar_Click;
         }
 
 
-        
+
         private void ConfigurarDataGridView()
         {
             dgvRegistros.AutoGenerateColumns = false;
@@ -55,7 +55,7 @@ namespace TallerMecanicoLosPinos
             dgvRegistros.RowHeadersVisible = false;
 
 
-            
+
             AgregarColumna("colCliente", "Cliente", "Cliente");
             AgregarColumna("colPatente", "Patente", "Patente");
             AgregarColumna("colVehiculo", "Vehículo", "Vehiculo");
@@ -72,7 +72,7 @@ namespace TallerMecanicoLosPinos
         }
 
 
-        
+
         private void AgregarColumna(
             string nombre,
             string titulo,
@@ -89,7 +89,7 @@ namespace TallerMecanicoLosPinos
         }
 
 
-        
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtCliente.Text) ||
@@ -135,7 +135,7 @@ namespace TallerMecanicoLosPinos
         }
 
 
-        
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dgvRegistros.SelectedRows.Count > 0)
@@ -168,14 +168,14 @@ namespace TallerMecanicoLosPinos
         }
 
 
-        
+
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
         }
 
 
-        
+
         private void LimpiarCampos()
         {
             txtCliente.Clear();
@@ -190,7 +190,7 @@ namespace TallerMecanicoLosPinos
         }
 
 
-        
+
         private bool GuardarRegistros()
         {
             try
@@ -210,8 +210,8 @@ namespace TallerMecanicoLosPinos
             }
         }
 
-
-
-
+        private void cmbservicio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
     }
 }
