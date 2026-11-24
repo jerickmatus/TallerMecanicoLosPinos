@@ -184,6 +184,7 @@
             // 
             // cmbservicio
             // 
+            cmbservicio.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbservicio.FormattingEnabled = true;
             cmbservicio.Items.AddRange(new object[] { "cambio de aceite", "mantenimiento", "revision de frenos", "revision motor" });
             cmbservicio.Location = new Point(512, 178);
